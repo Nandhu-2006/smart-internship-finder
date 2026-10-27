@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="340" viewBox="0 0 920 340" role="img" aria-labelledby="title desc">
+<title id="title">Pathway logo concept 04 — Rise</title>
+<desc id="desc">An original rising path and arrow logo in purple and pink for Pathway, a student internship finder.</desc>
+<defs>
+ <linearGradient id="rise" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#6038d5"/><stop offset=".55" stop-color="#a347d9"/><stop offset="1" stop-color="#ed4f99"/></linearGradient>
+ <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0eaff"/><stop offset="1" stop-color="#ffe7f2"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#5635a5" flood-opacity=".16"/></filter>
+</defs>
+<rect width="920" height="340" rx="28" fill="#faf8fd"/>
+<g transform="translate(86 72)" filter="url(#shadow)"><rect width="196" height="196" rx="52" fill="url(#tile)"/>
+ <path d="M43 130h37c19 0 25-13 33-32 9-20 19-42 43-42h10" fill="none" stroke="url(#rise)" stroke-width="17" stroke-linecap="round"/>
+ <path d="M148 38l25 18-25 19" fill="none" stroke="url(#rise)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+ <circle cx="45" cy="130" r="10" fill="#6038d5"/><circle cx="113" cy="99" r="7" fill="#a347d9"/>
+ <path d="M47 155h37" stroke="#ed4f99" stroke-width="6" stroke-linecap="round" opacity=".38"/>
+</g>
+<text x="332" y="171" fill="#25223b" font-family="Arial,sans-serif" font-size="58" font-weight="700" letter-spacing="-2">pathway</text>
+<text x="336" y="211" fill="#7148d9" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="2.2">FIND YOUR NEXT STEP</text>
+<text x="336" y="257" fill="#817d93" font-family="Arial,sans-serif" font-size="14">Concept 04 · Rise</text>
+<text x="336" y="281" fill="#817d93" font-family="Arial,sans-serif" font-size="12">A personal route becomes an arrow toward opportunity.</text>
+</svg>

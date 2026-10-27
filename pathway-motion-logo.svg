@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="title desc">
+<title id="title">Pathway rising opportunity mark</title>
+<desc id="desc">A glowing spark rises along purple and pink 3D steps.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0eaff"/><stop offset="1" stop-color="#ffe7f3"/></linearGradient>
+ <linearGradient id="top" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c7adff"/><stop offset=".55" stop-color="#a78aff"/><stop offset="1" stop-color="#805ce8"/></linearGradient>
+ <linearGradient id="left" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#805ce8"/><stop offset="1" stop-color="#5632c5"/></linearGradient>
+ <linearGradient id="right" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#ed73b2"/><stop offset="1" stop-color="#c83b85"/></linearGradient>
+ <linearGradient id="glow" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#7048e8"/><stop offset=".58" stop-color="#c04bce"/><stop offset="1" stop-color="#ffad64"/></linearGradient>
+ <radialGradient id="orb"><stop stop-color="#fff"/><stop offset=".32" stop-color="#ffe6a8"/><stop offset="1" stop-color="#f58bd0"/></radialGradient>
+ <filter id="drop" x="-40%" y="-40%" width="180%" height="190%"><feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#5632a5" flood-opacity=".22"/></filter>
+ <filter id="shine" x="-120%" y="-120%" width="340%" height="340%"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <path id="risePath" d="M18 81 C32 76 35 64 48 60 S66 43 75 38 S86 25 94 20"/>
+</defs>
+<style>
+ .step{filter:url(#drop);transform-box:fill-box;transform-origin:center;animation:stepLift 3.8s ease-in-out infinite}
+ .step.s2{animation-delay:.16s}.step.s3{animation-delay:.32s}.step.s4{animation-delay:.48s}
+ .orb{filter:url(#shine)}.arrow{transform-origin:96px 18px;animation:arrowPulse 2s ease-in-out infinite}
+ @keyframes stepLift{0%,100%{translate:0 0}50%{translate:0 -2px}}
+ @keyframes arrowPulse{0%,100%{scale:1;opacity:.9}50%{scale:1.12;opacity:1}}
+ @media(prefers-reduced-motion:reduce){.step,.arrow{animation:none!important}animateMotion{display:none}}
+</style>
+<rect x="4" y="4" width="112" height="112" rx="31" fill="url(#bg)"/>
+<!-- Isometric rising steps: shaded side faces create a small 3D stairway. -->
+<g class="step s1"><path d="M13 81 26 73 39 81 26 89Z" fill="url(#top)"/><path d="M13 81 26 89 26 101 13 93Z" fill="url(#left)"/><path d="M26 89 39 81 39 93 26 101Z" fill="url(#right)"/></g>
+<g class="step s2"><path d="M30 67 43 59 56 67 43 75Z" fill="url(#top)"/><path d="M30 67 43 75 43 87 30 79Z" fill="url(#left)"/><path d="M43 75 56 67 56 79 43 87Z" fill="url(#right)"/></g>
+<g class="step s3"><path d="M47 53 60 45 73 53 60 61Z" fill="url(#top)"/><path d="M47 53 60 61 60 73 47 65Z" fill="url(#left)"/><path d="M60 61 73 53 73 65 60 73Z" fill="url(#right)"/></g>
+<g class="step s4"><path d="M64 39 77 31 90 39 77 47Z" fill="url(#top)"/><path d="M64 39 77 47 77 59 64 51Z" fill="url(#left)"/><path d="M77 47 90 39 90 51 77 59Z" fill="url(#right)"/></g>
+<!-- The glowing waypoint travels up the stairs and loops. -->
+<circle class="orb" r="5.2" fill="url(#orb)"><animateMotion dur="3.4s" repeatCount="indefinite" rotate="auto"><mpath href="#risePath"/></animateMotion></circle>
+<circle r="9" fill="none" stroke="#f4a0d1" stroke-width="1.3" opacity=".6"><animateMotion dur="3.4s" repeatCount="indefinite"><mpath href="#risePath"/></animateMotion><animate attributeName="r" values="7;11;7" dur="1.3s" repeatCount="indefinite"/></circle>
+<!-- A destination arrow and tiny star at the summit. -->
+<path class="arrow" d="m88 20 9-2-2 9m1-8-9 9" fill="none" stroke="url(#glow)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M101 34c2.2-6 3.3-8 6-10 2.3 4.2 4.3 6 8 7.3-4 1.7-6 3.4-7.7 7.7-1.5-3.1-3-4.5-6.3-5Z" fill="#ffb45d"><animate attributeName="opacity" values=".55;1;.55" dur="1.8s" repeatCount="indefinite"/></path>
+</svg>
